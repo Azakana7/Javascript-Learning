@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+  
+
+        let usia = prompt("Berapa usia anda: ")
+        usia = parseInt(usia)
+        if (usia >= 18){
+            document.writeln(`<h1> SELAMAT DATANG! </h1>`)
+        } else{
+            document.writeln(`<h1> MAAF ANDA HARUS BERUSIA DIATAS 18 TAHUN </h1>`)
+        }
+
+        /*Tulis program untuk menghitung biaya pengiriman berdasarkan berat paket. 
+        Jika berat paket kurang dari atau sama dengan 1 kg, biaya pengiriman adalah $5. 
+        Jika beratnya lebih dari 1 kg tetapi kurang dari atau sama dengan 5 kg, biaya pengiriman adalah $10. 
+        Jika beratnya lebih dari 5 kg tetapi kurang dari atau sama dengan 20 kg, biaya pengiriman adalah $20. 
+        Jika beratnya lebih dari 20 kg, tampilkan pesan "Mohon hubungi kami untuk biaya pengiriman". */
+
+        let beratPaket = 6000
+        if (beratPaket == 1000){
+            document.writeln("Biaya pengiriman adalah $5")
+        } else if (beratPaket >= 1000 && beratPaket <= 5000){
+            document.writeln("Biaya pengiriman adalah $10")
+        } else if (beratPaket >= 5000 && beratPaket <= 20000){
+            document.writeln("Biaya pengiriman adalah $20")
+        } else if (beratPaket >= 20000){
+            document.writeln("Mohon hubungi kami untuk biaya pengiriman")
+        }
+
+
+
+        /*Buatlah program untuk menentukan bilangan terbesar dari tiga bilangan yang diinputkan oleh pengguna.*/
+
+        let masuk1 = parseInt(prompt("Silahkan masukkan bilangan: "));
+        let masuk2 = parseInt(prompt("Silahkan masukkan bilangan: "));
+        let masuk3 = parseInt(prompt("Silahkan masukkan bilangan: "));
+        
+        if (masuk1 <= masuk2 && masuk1 <= masuk3) {
+            document.writeln(`Ini terkecil: ${masuk1}`);
+        } else if (masuk2 <= masuk1 && masuk2 <= masuk3) {
+            document.writeln(`Ini terkecil: ${masuk2}`);
+        } else if (masuk3 <= masuk1 && masuk3 <= masuk2) {
+            document.writeln(`Ini terkecil: ${masuk3}`);
+        }
+        
+        if ((masuk1 >= masuk2 && masuk1 <= masuk3) || (masuk1 <= masuk2 && masuk1 >= masuk3)) {
+            document.writeln(`Ini menengah: ${masuk1}`);
+        } else if ((masuk2 >= masuk1 && masuk2 <= masuk3) || (masuk2 <= masuk1 && masuk2 >= masuk3)) {
+            document.writeln(`Ini menengah: ${masuk2}`);
+        } else if ((masuk3 >= masuk1 && masuk3 <= masuk2) || (masuk3 <= masuk1 && masuk3 >= masuk2)) {
+            document.writeln(`Ini menengah: ${masuk3}`);
+        }
+        
+        if (masuk1 >= masuk2 && masuk1 >= masuk3) {
+            document.writeln(`Ini terbesar: ${masuk1}`);
+        } else if (masuk2 >= masuk1 && masuk2 >= masuk3) {
+            document.writeln(`Ini terbesar: ${masuk2}`);
+        } else if (masuk3 >= masuk1 && masuk3 >= masuk2) {
+            document.writeln(`Ini terbesar: ${masuk3}`);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

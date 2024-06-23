@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sayHello(firstName, lastName){
+            const i = `helloww ${firstName} ${lastName}`
+            return i
+        }
+
+        // memanggil
+        const result = sayHello("Divo", "Saputra")
+        document.writeln(`<p> ${result} </p>`)
+
+
+
+        // Lagi
+        function sayHai(array, searchValue){
+            for (const element of array){
+                    if (element === searchValue){
+                    return true
+                }
+            }
+            return false
+        }
+
+        const array = [1,3,5,6,7,8,60,45,6,877,9,34,55]
+        const search = 3
+        const found = sayHai(array, search)
+        document.writeln(`<p> ${found} </p>`)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

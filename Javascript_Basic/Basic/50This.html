@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(this) // merupakan cara untuk mengecek kepemilikan
+        // jika di eksekusi akan menjadi window
+        function sample(){
+            console.info(this) // ini window
+            function inner(){
+                console.info(this) // ini window
+            }
+            inner()
+        }
+
+        sample()
+
+        // const person = {
+        //     Nama: "Divo",
+        //     sayHello: function(value){
+        //         document.writeln(`Halo ${value} My name is ${this.Nama}`)
+        //     }
+        // }
+
+        // person.sayHello("Akbar")
+
+        const say = function (Nilai = '')  {
+            let objek = {
+                Name: "Joko",
+                noTrust: function(){
+                    document.writeln(`Hai ${Nilai} nama saya ${this.Name}`)
+                }
+            }
+            objek.noTrust()
+        }
+
+        say(prompt("Siapa namamu?"))
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        const person = {
+            Nama: "Divo",
+            sayHello: function (umur){
+                alert(`Umur kamu ${umur}`)
+            }
+        }
+
+        console.log(person)
+        person.sayHello(16)
+
+        // menambah method ke object 
+        const nama = {
+            nama: "Eko"
+        }
+
+        nama.sayHi = function (nama) {
+            alert (`Halo ${nama}`)
+        }
+
+        nama.sayHi("Joko")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

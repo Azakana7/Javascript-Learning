@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sayHello(name){
+            console.info(`Hello ${name}`)
+        }
+
+        let say = sayHello
+        sayHello(`Divo`)
+        say(`Budi`)
+
+
+        function giveMeName(callback){
+            callback("Eko") // sayHello("Eko")
+        }
+
+        giveMeName(sayHello) // sayHello("Eko") <--- Wujud aseli
+        giveMeName(say) // giveMeName(sayHello)  <--- Wujud aseli
+
+
+        // Anonymous Function atau function tanpa nama
+        let Bilang = function (nama){
+            console.info(`Hai ${nama}`)
+        }
+
+        Bilang("Blyat")
+
+        giveMeName(function (nama){
+            document.writeln(`Halo ${nama}`)
+        })
+
+        let Variabel = function (){
+            let angkaAwal = 0
+            let angkaAkhir = 100
+
+            document.writeln(`Jadi tipe dari angka awal adalah: ${angkaAwal} yang bertipe data ${typeof(angkaAwal)}`)
+            document.writeln('</br>')
+            document.writeln(`Dan tipe dari angka akhir adalah: ${angkaAkhir} yang bertipe data ${typeof(angkaAkhir)}`)
+        }
+
+        Variabel()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let Angka1 = 0
+        let Angka2 = 6
+        
+        document.writeln(`<p> ${Angka1 || Angka2} </p>`)
+
+        let Person = {
+            firstName: "",
+            middleName: "Daniel"
+        }
+        const OR = Person.firstName || Person.middleName
+        console.info(OR)
+
+
+        // AND
+
+        let Nama = {
+            Nama: "",
+            umur: 16
+        }
+
+        const AND = Nama.Nama && Nama.umur
+        if (AND){
+            console.info("True")
+        } else{
+            console.info("False")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

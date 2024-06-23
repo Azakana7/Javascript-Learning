@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const person = {
+            firstName: "Divo",
+            middleName: "Daniel saputra",
+            get fullName() {
+                return `${this.firstName} ${this.middleName}`
+            },
+            set fullName(val){
+                const array = val.split(" ")
+                this.firstName = array[0]
+                this.middleName = array [1]
+            }
+        }
+        person.fullName = "Divo Saputra"
+        console.table(person)
+
+        person.fullName = "Eko Khannedy"
+        console.table(person)
+
+        person.fullName = "Joko moro"
+        console.table(person)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

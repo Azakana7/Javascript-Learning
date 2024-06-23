@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayPerson({firstName, middleName, lastName}) { // ini adalah destructuring di function parameter dalam bentuk Object
+            console.info(firstName)
+            console.info(middleName)
+            console.info(lastName)
+        }
+
+        const person = {
+            firstName: "Divo",
+            middleName: "Daniel",
+            lastName: "Saputra"
+        }
+
+        displayPerson(person)
+        // diatas adalah object
+        function sum([first, second]) { // ini adalah destructuring di function parameter dalam bentuk Array
+            return first + second
+        }
+
+        console.info(sum([10, 10]))
+        console.info(sum([10, 10]))
+        // diatas adalah Array
+
+        function namaPengunjung ({pengunjung1, pengunjung2, pengunjung3 = "Tidak ada"}) { // default value pada Object
+            document.writeln(pengunjung1)
+            document.writeln(`<br>`)
+            document.writeln(pengunjung2)
+            document.writeln(`<br>`)
+            document.writeln(pengunjung3)
+        }
+
+        const pengunjung = {
+            pengunjung1: "Joseph",
+            pengunjung2: "Abdul Johan"
+        }
+    
+        namaPengunjung(pengunjung)
+        // diatas adalah object
+        function urutanPeserta([urutan1, urutan2, urutan3 = "Kosong"]) { // default value pada Array
+            document.writeln(`<br>`)
+            document.writeln(`urutan ke ${urutan1}`)
+            document.writeln(`<br>`)
+            document.writeln(`urutan ke ${urutan2}`)
+            document.writeln(`<br>`)
+            document.writeln(`urutan ke ${urutan3}`)
+        }
+
+        urutanPeserta([1,2,3])
+        // diatas adalah Array
+
+        // pada Array kita bisa bebas menggunakan nama variabel yang berbeda dengan nama value, namun dalam kasus array itu beda, contoh:
+        let obj = {
+            accept: "Setuju",
+            deny: "Ditolak"
+        }
+
+        const {
+            accept: setuju,
+            deny: Nolak,
+            gatau: mboh = "akses ditolak"
+        } = obj
+
+        console.info(setuju)
+        console.info(Nolak)
+        console.info(mboh)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

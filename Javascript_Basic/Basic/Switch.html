@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let masuk1 = parseInt(prompt("Silahkan masukkan bilangan: "));
+        let masuk2 = parseInt(prompt("Silahkan masukkan bilangan: "));
+        let masuk3 = parseInt(prompt("Silahkan masukkan bilangan: "));
+        
+        if (masuk1 <= masuk2 && masuk1 <= masuk3) {
+            document.writeln(`Ini terkecil: ${masuk1}`);
+        } else if (masuk2 <= masuk1 && masuk2 <= masuk3) {
+            document.writeln(`Ini terkecil: ${masuk2}`);
+        } else if (masuk3 <= masuk1 && masuk3 <= masuk2) {
+            document.writeln(`Ini terkecil: ${masuk3}`);
+        }
+        
+        if ((masuk1 >= masuk2 && masuk1 <= masuk3) || (masuk1 <= masuk2 && masuk1 >= masuk3)) {
+            document.writeln(`Ini menengah: ${masuk1}`);
+        } else if ((masuk2 >= masuk1 && masuk2 <= masuk3) || (masuk2 <= masuk1 && masuk2 >= masuk3)) {
+            document.writeln(`Ini menengah: ${masuk2}`);
+        } else if ((masuk3 >= masuk1 && masuk3 <= masuk2) || (masuk3 <= masuk1 && masuk3 >= masuk2)) {
+            document.writeln(`Ini menengah: ${masuk3}`);
+        }
+        
+        if (masuk1 >= masuk2 && masuk1 >= masuk3) {
+            document.writeln(`Ini terbesar: ${masuk1}`);
+        } else if (masuk2 >= masuk1 && masuk2 >= masuk3) {
+            document.writeln(`Ini terbesar: ${masuk2}`);
+        } else if (masuk3 >= masuk1 && masuk3 >= masuk2) {
+            document.writeln(`Ini terbesar: ${masuk3}`);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

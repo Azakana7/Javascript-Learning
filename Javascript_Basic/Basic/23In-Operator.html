@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const person = {
+            Nama: "Divo",
+            Umur: 16
+        }
+        const hasil = "Nama" in person // untuk mengecek apakah ada index di dalam array
+        document.writeln(`<p> hasilnya adalah: ${hasil} </p>`)
+
+        const orang = {
+            Name: "Daniel",
+            Age: 18
+        }
+
+        if ("Name" in orang){
+            console.info(`Halo ${orang.Name}`)
+        } else{
+            console.info("False")
+        }
+
+        // Catatan: hanya mengecek index/property jadi walau null/undefined akan tetap dianggap ada
+
+        const Waa = {
+            firstName: "Divo",
+            middleName: undefined,
+            lastName: "Saputra"
+        }
+
+        const check = "middleName" in Waa 
+        document.writeln(`<p> hasilnya adalah: ${check} </p>`)
+
+        document.writeln(`<br>`)
+
+        const arrayIn = [null, "Saputra", null]
+        delete arrayIn[0] // jika index dihapus
+        const check2 = 0 in arrayIn // 3 tidak ada di index
+        document.writeln(`<p> hasil array-nya adalah: ${check2} </p>`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

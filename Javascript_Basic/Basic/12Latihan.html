@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Operasi Matematika
+        document.writeln("======================================")
+        document.writeln("<h1>" + "Operasi matematika" + "</h1>")
+
+        const X = 5
+        const Y = 10
+        const Z = 2
+
+        let Total1 = X * Y
+        document.writeln("<p>" + " 5 X 10 = " + Total1 + "</p>")
+        let hasil1 = Total1
+
+        let Total2 = hasil1  / Z
+        document.writeln("<p>" + " 50 : 2 = " + Total2 + "</p>")
+        let hasil2 = Total2
+
+        let Total3 = hasil2 * 4
+        document.writeln("<p>" + "25 x 4 =" + Total3 + "</p>") 
+        let hasil3 = Total3
+
+        let Total4 = hasil3 - 50
+        document.writeln(`<p> 100 - 50 = ${Total4} </p>`)
+
+        let TesC = Total4 != 40
+        document.writeln(`<p> 50 != 40 = ${TesC}`)
+
+        document.writeln(`<p> ${Total4 += 1}`)
+        let hasil4 = Total4
+        
+        let Total5 = hasil4 - 51
+        document.writeln(`<p> ${Total5}`)
+        document.writeln(`<br>`)
+
+        
+        document.writeln("======================================")
+        document.writeln(`<h1> Contok kasus </h1>`)
+        document.writeln(`<p>Budi mempunyai nilai ujian 100 dan nilai absen 100. Buatkan program untuk melihat apakah Budi lulus/tidak.</p>`)
+
+        //Blok program
+        const nilaiBudi = 100
+        const nilaiAbsen = 100
+
+        const lulusUjian = nilaiBudi > 90
+        const lulusAbsen = nilaiAbsen > 90
+        const lulus = lulusUjian && lulusUjian
+        document.writeln(`Apakah Budi lulus? [ ${lulus} ]`)
+        
+        let BudiLulus = lulus
+        <document.writeln(`<br>`)
+
+
+        console.info(lulus)
+
+        document.writeln("=====Konversi=====")
+        const Awal = "1"
+        const Tengah = "1"
+        const Tambah = parseInt(Awal) + parseInt(Tengah)
+        
+
+        document.writeln(`<p> Berapa nilai akhirnya: ${Tambah} </p>`)
+
+        console.info("Tambah")
+
+        const Gue = 100
+        const Lu = 90
+        const Ending = parseFloat(Gue) + parseFloat(Lu)
+        document.writeln(`<p> Gue + Lu = ${Ending} </p>`)
+
+    </script>
+</head>
+<body>
+    
+
+    
+</body>
+</html>

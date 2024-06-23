@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operasi logika</title>
+    <script>
+
+        // Variabel
+        let A = true
+        let  B = false
+
+    
+
+        // // &&
+        // document.writeln("<p>" + A && B + "</p>")
+
+        // // ||
+        // document.writeln("<p>" + A || B + "</p>")
+
+        // // !
+        // document.writeln("<p>" + !B + "</p>")
+
+
+
+        const nilaiUjian = 90
+        const nilaiAbsensi = 90
+
+        const lulusUjian = nilaiUjian > 75
+        document.writeln("<p>" + lulusUjian + "</p>") //True
+
+        const lulusAbsensi = nilaiAbsensi > 75
+        document.writeln("<p>" + lulusAbsensi + "</p>") // False
+
+        const lulus = lulusUjian && lulusAbsensi
+        document.writeln("<p>" + lulus + "</p>") // False
+
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

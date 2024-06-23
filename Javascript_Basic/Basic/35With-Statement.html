@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let namaCapres = {
+            Capres1: "Anies",
+            Capres2: "Prabowo",
+            Capres3: "Ganjar",
+            Capres4: 30
+        }
+
+        console.info(namaCapres['Capres1'])
+        with (namaCapres){ // Nama sbg scope
+            document.writeln(Capres1)
+            document.writeln(Capres2)
+            document.writeln(Capres3)
+            document.writeln(Capres4)
+        }
+
+        // perlu dicatat bahwa with statement sudah tidak disarankan
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

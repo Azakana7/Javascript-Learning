@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Bisa memudahkan mengambil data dari sebuah array/object, sehingga bisa dimasukkan ke variabel lain
+        // contoh mengambil data manual
+        let array = ["Divo", "Daniel", "Saputra"]
+        const firstName = array[0]
+        const middleName = array[1]
+        const lastName = array[2]
+
+        document.writeln(firstName)
+        document.writeln(middleName)
+        document.writeln(lastName)
+
+        // akan lebih bagus menggunakan destructuring, yaitu dengan:
+        let namaPelanggan = ["Jamal", "Eko", "Budi", "Burhan", "Udin", "Rizki Bogor"]
+        const [namaAwal, namaTengah, namaAkhir, ...others] = namaPelanggan
+
+        console.log(namaAwal)
+        console.log(namaTengah)
+        console.log(namaAkhir)
+        console.log(others)
+
+        let nilaiMahasiswa = [10, 69, 87, 90, 46, 77]
+        const [nilai1, nilai2, nilai3, ...nilaiLain] = nilaiMahasiswa
+        console.info(nilai1)
+        console.info(nilai2)
+        console.info(nilai3)
+        console.info(nilaiLain)
+
+
+        let blueSpecter = ["Ndasmu", "Oke", true, false, 10]
+        const [nomor1, nomor2, nomor3, ...lain] = blueSpecter
+        console.info(nomor1)
+        console.info(nomor2)
+        console.info(nomor3)
+        console.info(lain)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function daftar(Nama, Kelamin = "UNKNOWN"){ // Jika kelamin tidak diisi, maka default valuenya adalah unkown
+            console.info(Nama)
+            console.info(Kelamin)
+        }
+
+        daftar("Divo", "Pria")
+        daftar("Budi")
+        daftar("Wahyu", undefined)
+
+        function getName(nama, umur, kelamin = "Unknown"){
+            console.table(nama, umur, kelamin)
+        }
+
+        getName("Hafidz", "16", "Pria")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

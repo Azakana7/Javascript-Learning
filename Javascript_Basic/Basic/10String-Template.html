@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+    <script>
+        // String Template
+        const Nama = "Divo Daniel Saputra"
+        const ANama = "Divo"
+        const BNama = "Danieruu"
+        const CNama = "Saputra"
+        const Template = `Nama : ${ANama} ${BNama} ${CNama}`
+
+        document.writeln(Template)
+
+        // Subtitusi pada string template
+        const Name = "Divo"
+        const Nilai = 90
+        const Temp = `Nama ${Name}, Lulus: ${Nilai >= 80}`
+        document.writeln("<p>" + Temp + "</p>")
+
+        // Multiline String
+        const multiLine = `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptate asperiores sit voluptas esse culpa ratione. Sequi recusandae officiis et nulla. 
+        Numquam deserunt laborum voluptatem esse corporis natus architecto aliquid laudantium.
+        
+        `
+        document.writeln("<pre>")
+        document.writeln(multiLine)
+        document.writeln("</pre>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

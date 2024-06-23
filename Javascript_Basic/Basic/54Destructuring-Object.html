@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let person = {
+            firstName: "Divo",
+            lastName: "Saputra",
+            address: {
+                asal: "Indonesia",
+                alamat_ip: "127.0.0.1",
+                Kota: "Jakarta",
+            },
+            hobi: "Ngoding sampe mampus",
+            github: "Azakana7"
+        }
+
+        //console.table(person.address) ini jika menggunakan cara manual
+        //console.log(person.firstName)
+        const {firstName, lastName, address, ...others} = person // destructuring dengan Object
+        console.info(firstName)
+        console.info(lastName)
+        console.info(address)
+        console.info(others)
+
+        // Namun jika ingin mengambil di object yang nested maka:
+        //const {firstName, lastName, address: {asal, alamat_ip, Kota}, ...others} = person
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
