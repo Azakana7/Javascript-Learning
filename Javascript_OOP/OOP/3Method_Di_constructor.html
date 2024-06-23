@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function Person() {
+        this.firstName = "";
+        this.lastName = "";
+        this.sayHello = function (nama) {
+          console.info(`Hai ${nama}, namaku adalah ${this.firstName}`);
+        };
+      }
+
+      const Divo = new Person();
+      Divo.firstName = "Divo";
+      Divo.lastName = "Saputra";
+      Divo.sayHello("Joko");
+
+      const Jonathan = new Person();
+      Jonathan.firstName = "Jonathan";
+      Jonathan.lastName = "Chris";
+      Jonathan.sayHello("Joko");
+
+      console.log(Divo);
+      console.log(Jonathan);
+    </script>
+  </head>
+  <body></body>
+</html>

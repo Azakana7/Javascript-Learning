@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Premium() {
+            this.Member1 = ""
+            this.Member2 = ""
+            this.SapaMember = function(nama) {
+                console.info(`Hai ${nama}, perkenalkan saya adalah ${this.Member1} dan saya adalah waiter disini`)
+            }
+
+            const Alex = new Premium ()
+            Alex.Member1 = "Alex"
+            Alex.SapaMember("Ronald")
+
+            const Jake = new Premium ()
+            Jake.Member1 = "Jake"
+            Jake.SapaMember("Ronald")
+            
+            console.log(Alex)
+            console.log(Jake)
+        }
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

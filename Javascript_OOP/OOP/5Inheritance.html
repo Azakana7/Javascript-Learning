@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+    <script>
+      function Employee(firstName) {
+        this.firstName = firstName;
+        this.sayHello = function (name) {
+          document.writeln(
+            `Halo ${name}, namaku ${this.firstName} dan astaga kamu adalah gadis yang manis`
+          );
+        };
+      }
+      function Manager(firstName, lastName) {
+        Employee.call(this, firstName);
+        this.lastName = lastName;
+      }
+
+      const Divo = new Manager("Divo", "Daniel S.");
+      Divo.sayHello("Clara");
+
+      console.log(Divo);
+    </script>
+  </head>
+  <body></body>
+</html>

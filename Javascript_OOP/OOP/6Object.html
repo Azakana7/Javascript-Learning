@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+    <script>
+      // Materi prototype dimulai pada menit 00:36:55
+      // Link youtube: https://youtu.be/RwT41El778A?si=okH0U_T-T2ePcDfG
+      // cara membuat Object di JavaScript ada 4
+
+      //1. Object Literal
+      let Mahasiswa = {
+        Nama: "Divo",
+        Energi: 100,
+        makan: function (porsi) {
+          this.Energi = this.Energi + porsi;
+          console.log(`Halo ${this.Nama}, Selamat Makan!`);
+        },
+      };
+      //2. Function Literal
+      function Mahasiswi(name, energy) {
+        let mahasiswi = {};
+        mahasiswi.name = name;
+        mahasiswi.energy = energy;
+        mahasiswi.makann = function (porsii) {
+          // Fungsi pertama
+          this.energy = this.energy + porsii;
+          console.log(`Haii ${this.name}, Selamat Makan!`);
+          mahasiswi.main = function (Jam) {
+            this.energy -= Jam;
+            console.log(`Halo ${this.name}, jangan lupa Belajar yaa!!`);
+          };
+        };
+
+        return mahasiswi; // Jangan lupa melakukan return
+      }
+
+      let Daniel = Mahasiswi("Daniel", 10);
+      let Doddy = Mahasiswi("Doddy", 20);
+
+      //3. Constructor function
+      // dengan keyword New
+      function Siswa(Nam, Enerji) {
+        this.Nam = Nam;
+        this.Enerji = Enerji;
+        this.FungsiMakan = function (mangann) {
+          this.Enerji += mangann;
+          console.log(`Horeee ${this.Nam}, Selamat Makan!!!`);
+        };
+      }
+
+      let John = new Siswa("John", 12)
+      //4. Object.Create
+    </script>
+  </head>
+  <body>
+    <h1>Ini adalah materi prototype</h1>
+  </body>
+</html>

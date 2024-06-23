@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Link Belajar: https://youtu.be/3pQ7Qpzl_pY?si=UXTVteDvYTmVufkm
+
+      const mahasiswaMethod = {
+        Makan: function (porsi) {
+          this.Energy += porsi;
+          console.log(`Hai ${this.Nama}, Selamat Makan!`);
+        },
+        Tidur: function (nambah) {
+          this.Energy *= 5;
+          console.log(`Hai ${this.Nama}, selamat tidur!`);
+        },
+        Main: function (ngurang) {
+          this.Energy -= ngurang;
+          console.log(`Heii ${this.Nama}, Jangan main terus dong!`);
+        },
+      };
+
+      function Mahasiswa(Nama, Energy) {
+        let Mahasiswa = Object.create(mahasiswaMethod);
+        Mahasiswa.Nama = Nama;
+        Mahasiswa.Energy = Energy;
+
+        return Mahasiswa;
+      }
+
+      let Divo = new Mahasiswa("Divo", 10);
+
+      // SECARA PENGGUNAAN INI SUDAH LEBIH BAIK DARIPADA OBJECT LITERAL DAN FUNCTION LITERAL, NAMUN TETAP INI BAGAIKAN KERJA 2 KALI
+    </script>
+  </head>
+  <body></body>
+</html>

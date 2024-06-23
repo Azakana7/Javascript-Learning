@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        // Link YouTube: https://youtu.be/2CQhh_6xU3s?si=2D7NN5Q8cnTGPb78
+
+    //   function Mahasiswa(Nama, Energi) {
+    //     this.Nama = Nama;
+    //     this.Energi = Energi;
+    //   }
+    //   Mahasiswa.prototype.Makan = function (porsi) {
+    //     this.Energi += porsi;
+    //     return `Halo ${this.Nama}, selamat makan!`;
+    //   };
+    //   Mahasiswa.prototype.Main = function (Jam) {
+    //     this.Energi -= Jam;
+    //     return `Halo ${this.Nama}, Selamat Bermain!`;
+    //   };
+    //   Mahasiswa.prototype.Tidur = function(Bangun) {
+    //     this.Energi += Bangun * 10
+    //     return `Halo ${this.Nama}, Selamat Tidur!`;
+    //   }
+
+    //   let Divo = new Mahasiswa('Divo', 10);
+
+      // DIATAS ADALAH CARA MEMBUAT PROTOTYPE, DENGAN PROTOTYPE INHERITANCE
+
+      // Versi Class
+
+      class Mahasiswa {
+        constructor (nama, energy) {
+            // Ini adalah cara membuat property-nya
+            this.nama = nama
+            this.energy = energy
+        } // JANGAN LUPA METHOD DIBUAT DIBAWAH KURUNG KURAWAL YG INI
+        Makan(porsi){ // INI ADALAH METHOD, DENGAN CLASS KAMU TIDAK PERLU MENGGUNAKAN FUNCTION
+            this.energy += porsi
+            return `Hai ${this.nama}, Jangan lupa Makan!`
+        }
+        Sholat(Kedamaian) {
+            this.energy *= Kedamaian
+            return `Hai ${this.nama}, Jangan sampai melupakan Sholat ya!`
+        }
+        
+      }
+      let Divo = new Mahasiswa('Divo', 15)
+
+      // Menurut saya ini adalah cara yg paling mudah dan masuk akal
+
+    </script>
+  </head>
+  <body></body>
+</html>

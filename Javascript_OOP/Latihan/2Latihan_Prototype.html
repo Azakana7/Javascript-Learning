@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+    <script>
+      // Buatkan saya constructor function Mahasiswa, Oke
+      const methodPlayer = {
+        Kecepatan: function (speed) {
+          this.itemPower += speed;
+          let hasilSpeed = this.itemPower;
+          document.writeln(`Selamat ${this.Nama}, Kecepatanmu meningkat!`);
+          document.writeln("</br>");
+          document.writeln(`Power kamu sekarang adalah ${hasilSpeed}`);
+          document.writeln("</br>");
+        },
+        Kecerdasan: function (intelligence) {
+          this.itemPower += intelligence;
+          let hasilInt = this.itemPower;
+          document.writeln(`Selamat ${this.Nama}, kecerdasanmu meningkat!`);
+          document.writeln("</br>");
+          document.writeln(`Power kamu sekarang adalah ${hasilInt}`);
+          document.writeln("</br>");
+        },
+        Ketahanan: function (def) {
+          this.itemPower += def;
+          let hasilDef = this.itemPower;
+          document.writeln(`Selamat ${this.Nama}, Pertahananmu meningkat!`);
+          document.writeln("</br>");
+          document.writeln(`Power kamu sekarang adalah ${hasilDef}`);
+          document.writeln("</br>");
+        },
+      };
+
+      function Mahasiswa(Nama, itemPower) {
+        let mahasiswa = Object.create(methodPlayer);
+        this.Nama = Nama;
+        this.itemPower = itemPower;
+
+        return this;
+      }
+      Mahasiswa.prototype = methodPlayer;
+      let Divo = new Mahasiswa("Divo", 100);
+      // Script diatas dibuat dengan Prototype Inheritance
+
+      // Dengan class (Gw sih pake ini soalnya EZ buat dipahami(Kalo kata gw mah))
+      class Siswa {
+        constructor(Name, Energi) {
+          this.Name = Name;
+          this.Energi = Energi;
+        }
+        Eat(kenyang) {
+          this.Energi += kenyang;
+          let currentEnergyFromEat = this.Energi;
+          console.log(`Alhamdulillah ${this.Name}, akhirnya kamu kenyang!`);
+          console.log(`Energi kamu sekarang adalah: ${currentEnergyFromEat}`);
+        }
+        Drink(Lega) {
+          this.Energi += Lega;
+          let currentEnergyFromDrink = this.Energi;
+          console.log(
+            `Alhamdulillah ${this.Name}, akhirnya kamu tidak haus lagi!`
+          );
+          console.log(`Energi kamu sekarang adalah: ${currentEnergyFromDrink}`);
+        }
+        Sleep(Seger) {
+          this.Energi += Seger;
+          let currentEnergyFromSleep = this.Energi;
+          console.log(`Selamat pagi ${this.Name}, Energi kamu terisi kembali!`);
+          console.log(`Energi kamu sekarang adalah: ${currentEnergyFromSleep}`);
+        }
+        Run(Lari) {
+          this.Energi -= Lari;
+          let currentEnergyFromRun = this.Energi;
+          console.log(`Hai ${this.Name}, kamu pasti lelah`);
+          console.log(`Energi kamu sekarang adalah: ${currentEnergyFromRun}`);
+        }
+      }
+      let Vildan = new Siswa("Vildan", 0);
+    </script>
+  </head>
+  <body>
+    <h1>Ini adalah dokumentasi latihan prototype Javascript</h1>
+  </body>
+</html>

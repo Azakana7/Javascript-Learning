@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Link Youtube: https://youtu.be/jsW0taT36qU?si=nP_ND9bEVIViMArq
+      // Durasi terakhir: 14:18
+
+      // Lexical Scope:
+
+    //   function init() {
+    //     let Nama = "Divo"; // Local Variable scope di dalam function init
+    //     function tampilNama() {
+    //       // ini disebut Inner function, dan ini adalah closure
+    //       console.log(Nama); // Dia akan mencari variable Nama di dalam tampilNama, jika tidak ada akan naik terus sampai ke Global
+    //     }
+    //     tampilNama();
+    //   }
+    //   init();
+
+
+
+
+
+
+
+      /* Kenapa kita menggunakan Closure? apa manfaatnya?
+      1. Untuk membuat function Factories
+      2. Membuat function Factories
+      */
+
+        // contoh function factories
+        function ucapSalam(waktu) {
+            return function(name) {
+                console.log(`Hai ${name}, Selamat ${waktu} semoga harimu menyenangkan!`)
+            }
+        }
+
+        let selamatPagi = ucapSalam('Pagi');
+        let selamatSiang = ucapSalam('Siang');
+        let selamatMalam = ucapSalam('Malam');
+
+        selamatPagi('Divo');
+    </script>
+  </head>
+  <body></body>
+</html>
